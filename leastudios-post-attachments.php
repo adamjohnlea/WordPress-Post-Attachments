@@ -28,3 +28,9 @@ function leastudios_activate() {
     $plugin_data = get_file_data(__FILE__, $default_headers, 'plug-in');
     update_option( 'leastudios_version', $plugin_data['Version'] );
 }
+if ( ! defined( 'LEASTUDIOS_PLUGIN_DIR' )) {
+    define( 'LEASTUDIOS_PLUGIN_DIR', plugin_dir_path(__FILE__) );
+}
+if ( ! defined( 'LEASTUDIOS_PLUGIN_URL' )) {
+    define( 'LEASTUDIOS_PLUGIN_URL', plugin_dir_url(__FILE__) );
+}
